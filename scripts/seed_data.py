@@ -1,8 +1,14 @@
 # seed_data.py
 from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 # ✅ MongoDB 연결 설정
-client = MongoClient("mongodb://localhost:27017")
+MongoDB_URL = os.getenv("MongoDB_URL")
+client = MongoClient(MongoDB_URL)# "mongodb://localhost:27017"
+
 db = client["scent_db"]  # 사용할 데이터베이스
 collection = db["fragrances"]  # 사용할 컬렉션
 
