@@ -1,17 +1,16 @@
 # 향수 추천 서비스 백엔드 API
 
-사용자의 취향과 상황에 맞는 향수를 추천해주는 서비스의 백엔드 API 서버입니다.
+사용자가 좋아하는 향을 기준으로 제품을 분류하는 서비스의 백엔드 API 서버입니다.
 
 ## ✨ 주요 기능
 
-- 향수 정보 조회, 검색 및 필터링
-- 사용자별 향수 추천
-- Naver 쇼핑 API를 연동한 최저가 정보 제공
+- 제품별 향 정보 조회, 필터링
+- Naver 쇼핑 API를 연동한 정보 제공
 
 ## 🛠️ 기술 스택
 
 - **Framework**: FastAPI
-- **Database**: MongoDB (with Motor for asynchronous operations)
+- **Database**: MongoDB
 - **Server**: Uvicorn
 - **Environment Management**: python-dotenv
 - **Linting/Formatting**: flake8, black
@@ -56,7 +55,6 @@ cp .env.template .env
 
 ```
 MONGODB_URI=mongodb://your_mongodb_uri
-DB_NAME=your_db_name
 NAVER_CLIENT_ID=your_naver_client_id
 NAVER_CLIENT_SECRET=your_naver_client_secret
 ```
